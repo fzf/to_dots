@@ -1,5 +1,5 @@
 class Hash
   def to_dots
-    HashToDots.to_dots(self)
+    ToDots.to_dots(self)
   end
 end

@@ -1,13 +1,15 @@
 require "to_dots/version"
+require 'hash'
+require 'array'
 
 module ToDots
   def self.to_dots(object, result = [], prefix = '')
     case object
-    when Hash
+    when ::Hash
       object.each do |key, value|
         to_dots(value, result, "#{prefix}#{'.' unless prefix.empty?}#{key}")
       end
-    when Array
+    when ::Array
       object.each_with_index do |value, index|
         to_dots(value, result, "#{prefix}")
       end
