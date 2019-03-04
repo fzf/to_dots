@@ -1,6 +1,6 @@
 require "to_dots/version"
-require 'hash'
-require 'array'
+require_relative './hash'
+require_relative './array'
 
 module ToDots
   def self.to_dots(object, result = [], prefix = '')
